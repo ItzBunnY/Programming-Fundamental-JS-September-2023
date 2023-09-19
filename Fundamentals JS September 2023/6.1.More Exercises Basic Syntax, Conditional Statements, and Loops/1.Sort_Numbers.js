@@ -5,38 +5,35 @@ function sort(num1, num2, num3){
     let low = 0;
 
     if(num1 > num2  && num1 > num3){
+        high = num1;
         if(num2 > num3){
-            high = num1;
             mid = num2;
             low = num3;
         }
         else{
-            high = num1;
             mid = num3;
             low = num2;
         }
     }
     else if(num2 > num1 && num2 > num3){
+        high = num2;
         if(num1 > num3){
-            high = num2;
             mid = num1;
             low = num3;
         }
         else{
-            high = num2;
             mid = num3;
             low = num1;
         }
         
     }
     else if(num3 > num1 && num3 > num2){
+        high = num3;
         if(num1 > num2){
-            high = num3;
             mid = num1;
             low = num2;
         }
         else{
-            high = num3;
             mid = num2;
             low = num1;
         }
