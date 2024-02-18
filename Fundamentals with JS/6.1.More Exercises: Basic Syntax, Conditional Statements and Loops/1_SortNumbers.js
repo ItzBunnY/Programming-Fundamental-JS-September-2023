@@ -1,32 +1,48 @@
-function solve(num1,num2,num3){
-    let top = 0;
-    let mid = 0;
-    let bot = 0;
+function sort(num1, num2, num3){
 
-    if (num1 > num2 && num1 > num3){
-        top = num1;
+    let high = 0;
+    let mid = 0;
+    let bottom = 0;
+
+    if(num1 > num2  && num1 > num3){
         if(num2 > num3){
+            high = num1;
             mid = num2;
-            bot = num3;
+            bottom = num3;
         }
         else{
+            high = num1;
             mid = num3;
-            bot = num2;  
+            bottom = num2;
         }
     }
     else if(num2 > num1 && num2 > num3){
-        top = num2;
-        mid = num3;
-        bot = num1;
+        if(num1 > num3){
+            high = num2;
+            mid = num1;
+            bottom = num3;
+        }
+        else{
+            high = num2;
+            mid = num3;
+            bottom = num1;
+        }
+        
     }
-    else if (num3 > num1 && num3 > num2){
-        top = num3;
-        mid = num1;
-        bot = num2;  
+    else if(num3 > num1 && num3 > num2){
+        if(num1 > num2){
+            high = num3;
+            mid = num1;
+            bottom = num2;
+        }
+        else{
+            high = num3;
+            mid = num2;
+            bottom = num1;
+        }
+        
     }
-    console.log(top);
+    console.log(high);
     console.log(mid);
-    console.log(bot);
-
+    console.log(bottom);   
 }
-solve(-2,1,3)
